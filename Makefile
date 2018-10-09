@@ -2,8 +2,10 @@
 init:
 	godep go install
 test:
-	go test
+	cd src && goconvey -host="0.0.0.0"
 docs:
 	cd docs && make
 build:
-	go build
+	cd src && go build -o dist/main
+run:
+	cd src && go run main.go
