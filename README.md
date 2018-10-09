@@ -19,10 +19,19 @@ user@host$ git clone git@github.com:hook-s3c/tmhc-norvegicus.git
 user@host$ cd tmhc-norvegicus
 user@host$ docker-compose up -d                        # start the container
 user@host$ docker exec -t -i $(docker ps -lq) bash -l  # attach to the container to get a bash prompt
-root@contaainer$ cd /root/tmhc-norvegicus && make build
+root@container$ apt-get install tzdata                 # fix for docker timezone issue
+root@container$ cd /root/tmhc-norvegicus && make run
 ```
 
 You can build, test and edit the project within the container.
+
+#### Specs and testing;
+
+```
+user@host$ docker exec -t -i $(docker ps -lq) bash -l  # attach to the container to get a bash prompt
+root@container$ cd /root/tmhc-norvegicus && make test
+```
+Now open a browser on http://localhost:8080/ and you will now see the test suite loaded.
 
 ### Baremetal;
 
