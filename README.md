@@ -29,7 +29,7 @@ Optionally you should be able to install all the components directly on your mac
 Dependencies;
 
 - Go (`apt-get install golang` - Ubuntu)
-- ?
+- Make (`apt-get install make` - Ubuntu)
 
 
 ## Disclaimer
