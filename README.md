@@ -15,6 +15,8 @@ For dependencies you will need to install Docker and Docker-Compose.
 Instructions can be found on the wiki.
 
 ```bash
+user@host$ git clone git@github.com:hook-s3c/tmhc-norvegicus.git
+user@host$ cd tmhc-norvegicus
 user@host$ docker-compose up                         # start the container
 user@host$ docker exec -t -i $(docker ps -lq) bash -l  # attach to the container to get a bash prompt
 root@contaainer$ cd /root/tmhc-norvegicus && make build

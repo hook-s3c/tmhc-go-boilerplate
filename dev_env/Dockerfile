@@ -12,7 +12,7 @@ RUN apt-get update
 RUN apt-get install tmux git golang neovim make -y
 
 # set the GOPATH environment variable
-ENV GOPATH="${HOME}/tmhc-norvegicus"
+ENV GOPATH="${HOME}/root/tmhc-norvegicus"
 ENV PATH="${GOPATH}/bin:${PATH}"
 
 # Go dependencies / tooling
