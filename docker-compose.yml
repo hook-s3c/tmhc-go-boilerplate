@@ -3,7 +3,7 @@ services:
   dev_env:
     build: dev_env
     volumes:
-      - ./:/root/tmhc-norvegicus
+      - ./:/root/tmhc-go-boilerplate
     ports:
       - "8080:8080"
 
