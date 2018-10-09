@@ -2,3 +2,8 @@ version: "2"
 services:
   dev_env:
     build: dev_env
+    volumes:
+      - ./:/root/tmhc-norvegicus
+    ports:
+      - "8080:8080"
+
