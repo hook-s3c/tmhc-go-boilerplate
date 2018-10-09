@@ -9,8 +9,11 @@ CMD ["/sbin/my_init"]
 
 # ...put your own build instructions here...
 RUN apt-get update
-RUN apt-get install tmux git golang neovim -y
+RUN apt-get install tmux git golang neovim make -y
 
+# set the GOPATH environment variable
+ENV GOPATH="${HOME}/tmhc-norvegicus"
+ENV PATH="${GOPATH}/bin:${PATH}"
 
-# Clean up APT when done.
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# Go dependencies / tooling
+RUN go get github.com/smartystreets/goconvey
