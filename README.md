@@ -16,9 +16,8 @@ Instructions can be found on the wiki.
 
 ```bash
 user@host$ docker-compose up                         # start the container
-user@host$ docker ps -a                              # review the container id
-user@host$ docker exec -t -i 12345678901234 bash -l  # attach to the container to get a bash prompt
-root@contaainer$ cd /root/tmhc-norvegicus && go build
+user@host$ docker exec -t -i $(docker ps -lq) bash -l  # attach to the container to get a bash prompt
+root@contaainer$ cd /root/tmhc-norvegicus && make build
 ```
 
 You can build, test and edit the project within the container.
